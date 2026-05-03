@@ -12,7 +12,7 @@ import css from "./assets/css.png"
 
 const Menu = () => {
   return(
-  <div id ="menu" className= {'text-blue-300 font-bold top-5 left-5 flex flex-col place-items-start gap-7 py-12 fixed text-[25px] z=50'}>
+  <div id ="menu" className= {'text-blue-300 font-bold top-5 text-lg sm:text-xl md:text-2xl fixed left-3 sm:left-5 backdrop-blur-md p-4 rounded-xl flex flex-col place-items-start gap-7 py-12 text-[25px] z=50'}>
     <button onClick = {() => document.getElementById("home")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Home</button>
     <button onClick = {() => document.getElementById("about")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>About Me</button>
     <button onClick = {() => document.getElementById("work")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Languages</button>
@@ -29,7 +29,7 @@ const App = () => {
     <div id="home" 
     className= 'h-screen flex flex-col items-center justify-center'>
       
-      <h1 className='text-blue-500 text-[80px] 
+      <h1 className='text-blue-500 text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-center px-4 
         [text-shadow:0_0_10px_rgba(0,0,230,0.9)] 
         font-bold'>
         Sumeet Haswani
@@ -53,19 +53,19 @@ const App = () => {
       
     </div>
     <a href  = "/resume.pdf" download>
-      <button className='px-10 py-4 rounded-full text-large  flex flex-row my-[-175px] font-bold text-blue-300 bg-black hover:bg-slate-900 hover:translate-y-[-3px]'>
+      <button className='px-10 py-4 rounded-full text-large  flex flex-row mt-6 sm:mt-10 font-bold text-blue-300 bg-black hover:bg-slate-900 hover:translate-y-[-3px]'>
         Resume
       </button>
       </a>
     <div className='absolute top-5 left-5'>
-      <button onClick = {() => setShowMenu(!showMenu)}className='flex flex-col justify-left items-left gap-1 my-[-10px] py-4 cursor-pointer fixed z-50 hover:translate-y-[-3px]'>
+      <button onClick = {() => setShowMenu(!showMenu)}className='flex flex-col justify-left items-left gap-1 my-[-10px] py-4 cursor-pointer fixed z-50 hover:translate-y-[-3px] font-bold'>
         <span className='block w-6 h-[2px] bg-blue-500'></span>
         <span className='block w-6 h-[2px] bg-blue-500'></span>
         <span className='block w-6 h-[2px] bg-blue-500'></span>
       </button>
        {showMenu && <Menu />}
     </div>
-     <div id="about" className=' h-screen flex flex-col items-center justify-center'>
+     <div id="about" className=' min-h-screen px-4 py-10 flex flex-col items-center justify-center'>
       
       <h1 className='text-blue-500 text-5xl 
         [text-shadow:0_0_10px_rgba(0,0,230,0.9)] 
@@ -73,7 +73,7 @@ const App = () => {
         About Me
       </h1>
 
-      <p className='text-blue-300 text-lg font-bold mt-2 max-w-2xl py-12'>
+      <p className='text-blue-300 text-lg font-bold mt-2 max-w-xl sm:max-w-2xl text-center px-4 py-12'>
         I am a Computer Science student with a strong interest in web development and artificial intelligence. I enjoy building clean, responsive, and user-friendly applications that provide a smooth user experience.
 
 I have a good foundation in programming languages like C++, Java, and Python, and I am currently exploring front-end technologies such as HTML, CSS, JavaScript, and React. I like turning ideas into real projects and continuously improving my skills through practice.
@@ -82,14 +82,14 @@ I am passionate about learning new technologies and solving problems, and my goa
 
       </p>
     </div>
-      <div id="work" className='h-screen flex flex-col items-center justify-center'>
+      <div id="work" className='min-h-screen px-4 py-10 flex flex-col items-center justify-center'>
       
       <h1 className='text-blue-500 text-5xl 
         [text-shadow:0_0_10px_rgba(0,0,230,0.9)] 
         font-bold'>
         Languages
       </h1>
-<div className="grid grid-cols-3 my-[1px] place-items-center">
+<div className="grid grid-cols-2 sm:grid-cols-3 gap-4 my-[1px] place-items-center">
   <img src={c} className="w-20 h-20 object-contain hover:scale-110 cursor-pointer" />
   <img src={java} className="w-30 h-30 object-contain hover:scale-110 cursor-pointer" />
   <img src={py} className="w-20 h-20 object-contain hover:scale-110 cursor-pointer" />
@@ -98,7 +98,7 @@ I am passionate about learning new technologies and solving problems, and my goa
   <img src={react} className="w-20 h-20 object-contain hover:scale-110 cursor-pointer" />
 </div>
         </div>
-<div id="project" className="min-h-screen flex flex-col items-center justify-center">
+<div id="project" className="min-h-screen px-4 py-10 flex flex-col items-center justify-center">
 
   <h1 className="text-blue-500 text-5xl 
     [text-shadow:0_0_10px_rgba(0,0,230,0.9)] font-bold mb-10">
@@ -106,14 +106,14 @@ I am passionate about learning new technologies and solving problems, and my goa
   </h1>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div className="bg-white/10 backdrop-blur-md p-5 rounded-xl w-72 shadow-lg 
+    <div className="bg-white/10 backdrop-blur-md p-5 rounded-xl w-full max-w-sm shadow-lg 
     hover:scale-105 hover:shadow-2xl transition duration-300">
 
       <h2 className="text-xl font-bold text-blue-400">
         Password Generator
       </h2>
 
-      <ul className="text-sm mt-3 space-y-1 text-gray-300">
+      <ul className="text-sm mt-3 space-y-1 text-gray-300 cursor-pointer">
         <li>🔐 Generates secure passwords</li>
         <li>⚙️ Custom length & complexity</li>
         <li>🧠 Focus on logic & string handling</li>
@@ -130,7 +130,7 @@ I am passionate about learning new technologies and solving problems, and my goa
         Number Guessing Game
       </h2>
 
-      <ul className="text-sm mt-3 space-y-1 text-gray-300">
+      <ul className="text-sm mt-3 space-y-1 text-gray-300 cursor-pointer">
         <li>🎯 Interactive guessing game</li>
         <li>🔁 Feedback: high / low hints</li>
         <li>🧠 Uses loops & conditions</li>
@@ -147,7 +147,7 @@ I am passionate about learning new technologies and solving problems, and my goa
         Grade Tracker
       </h2>
 
-      <ul className="text-sm mt-3 space-y-1 text-gray-300">
+      <ul className="text-sm mt-3 space-y-1 text-gray-300 cursor-pointer">
         <li>📊 Tracks student grades</li>
         <li>📈 Displays performance results</li>
         <li>🧠 Uses lists & functions</li>
@@ -164,7 +164,7 @@ hover:scale-105 hover:shadow-2xl transition duration-300">
     Portfolio Website
   </h2>
 
-  <ul className="text-sm mt-3 space-y-1 text-gray-300">
+  <ul className="text-sm mt-3 space-y-1 text-gray-300 cursor-pointer">
     <li>🌐 Personal portfolio to showcase skills & projects</li>
     <li>⚛️ Built using React and Tailwind CSS</li>
     <li>🎨 Responsive design with smooth animations</li>
@@ -177,7 +177,7 @@ hover:scale-105 hover:shadow-2xl transition duration-300">
 
   </div>
 </div>
-    <div id="contact" className=' h-screen flex flex-col items-center justify-center'>
+    <div id="contact" className=' min-h-screen px-4 py-10 flex flex-col items-center justify-center'>
       
       <h1 className='text-blue-500 text-5xl 
         [text-shadow:0_0_10px_rgba(0,0,230,0.9)] 
