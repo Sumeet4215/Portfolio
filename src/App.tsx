@@ -15,8 +15,9 @@ const Menu = () => {
   <div id ="menu" className= {'text-blue-300 font-bold top-5 text-lg sm:text-xl md:text-2xl fixed left-3 sm:left-5 backdrop-blur-md p-4 rounded-xl flex flex-col place-items-start gap-7 py-12 text-[25px] z=50'}>
     <button onClick = {() => document.getElementById("home")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Home</button>
     <button onClick = {() => document.getElementById("about")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>About Me</button>
-    <button onClick = {() => document.getElementById("work")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Languages</button>
+    <button onClick = {() => document.getElementById("lang")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Skills</button>
      <button onClick = {() => document.getElementById("project")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Projects</button>
+     <button onClick = {() => document.getElementById("work")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Work</button>
     <button onClick = {() => document.getElementById("contact")?.scrollIntoView({behavior : 'smooth'})} className='hover:translate-y-[-3px] rounded-full px-8 py-2 hover:bg-blue-300 hover:text-blue-500'>Contact Me</button>
   </div>
   )
@@ -82,12 +83,12 @@ I am passionate about learning new technologies and solving problems, and my goa
 
       </p>
     </div>
-      <div id="work" className='min-h-screen px-4 py-10 flex flex-col items-center justify-center'>
+      <div id="lang" className='min-h-screen px-4 py-10 flex flex-col items-center justify-center'>
       
       <h1 className='text-blue-500 text-5xl 
         [text-shadow:0_0_10px_rgba(0,0,230,0.9)] 
         font-bold'>
-        Languages
+        Skills
       </h1>
 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 my-[1px] place-items-center">
   <img src={c} className="w-20 h-20 object-contain hover:scale-110 cursor-pointer" />
@@ -175,6 +176,49 @@ hover:scale-105 hover:shadow-2xl transition duration-300">
   </p>
 </div>
 
+</div>
+<div id="work" className="min-h-screen px-4 py-10 flex flex-col items-center justify-center">
+
+  <h1 className="text-blue-500 text-5xl 
+    [text-shadow:0_0_10px_rgba(0,0,230,0.9)] font-bold mb-10">
+    Work Experiance
+  </h1>
+
+  <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+    <div className="bg-white/10 backdrop-blur-md p-5 rounded-xl w-full max-w-sm shadow-lg 
+    hover:scale-105 hover:shadow-2xl transition duration-300">
+
+      <h2 className="text-xl font-bold text-blue-400">
+        Internshala (ISP)
+      </h2>
+
+      <ul className="text-sm mt-3 space-y-1 text-gray-300 cursor-pointer">
+        <li> Led campus outreach initiatives to increase awareness of internship opportunities</li>
+        <li> Organized student engagement activities and promotional campaigns</li>
+        <li> Developed leadership, communication, and coordination skills</li>
+      </ul>
+
+      <p className="text-xs mt-3 text-blue-300">
+        Oct 2025 - Dec 2025
+      </p>
+    </div>
+    <div className="bg-white/10 backdrop-blur-md p-5 rounded-xl w-72 shadow-lg 
+    hover:scale-105 hover:shadow-2xl transition duration-300">
+
+      <h2 className="text-xl font-bold text-blue-400">
+        GeeksforGeeks (Campus Mantri)
+      </h2>
+
+      <ul className="text-sm mt-3 space-y-1 text-gray-300 cursor-pointer">
+        <li> Promoting coding culture and technical learning among students</li>
+        <li> Increasing student participation in programming and development activities</li>
+        <li> Engaging with the tech community through structured outreach</li>
+      </ul>
+
+      <p className="text-xs mt-3 text-blue-300">
+        Jan 2026 - Present
+      </p>
+    </div>
   </div>
 </div>
     <div id="contact" className=' min-h-screen px-4 py-10 flex flex-col items-center justify-center'>
@@ -202,6 +246,7 @@ hover:scale-105 hover:shadow-2xl transition duration-300">
       </button>
       </div>
       </div>
+    </div>
     </div>
   )
 }
