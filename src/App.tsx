@@ -53,7 +53,7 @@ const App = () => {
       
     </div>
     <a href  = "/resume.pdf" download>
-      <button className='px-10 py-4 rounded-full text-large  flex flex-row mt-6 sm:mt-10 font-bold text-blue-300 bg-black hover:bg-slate-900 hover:translate-y-[-3px]'>
+      <button className='px-10 py-4 rounded-full text-large flex flex-row mt-6 sm:mt-10 font-bold text-blue-300 bg-black hover:bg-slate-900 hover:translate-y-[-3px] absolute top-[-3px] right-5 mx-5 my-[-30px]'>
         Resume
       </button>
       </a>
@@ -73,7 +73,7 @@ const App = () => {
         About Me
       </h1>
 
-      <p className='text-blue-300 text-lg font-bold mt-2 max-w-xl sm:max-w-2xl text-center px-4 py-12'>
+      <p className='text-blue-300 text-lg font-bold mt-2 max-w-xl sm:max-w-2xl text-balance px-4 py-12'>
         I am a Computer Science student with a strong interest in web development and artificial intelligence. I enjoy building clean, responsive, and user-friendly applications that provide a smooth user experience.
 
 I have a good foundation in programming languages like C++, Java, and Python, and I am currently exploring front-end technologies such as HTML, CSS, JavaScript, and React. I like turning ideas into real projects and continuously improving my skills through practice.
